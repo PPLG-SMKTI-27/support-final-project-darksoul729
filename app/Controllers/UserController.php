@@ -9,8 +9,8 @@ class UserController {
     }
 
    public function index() {
-    $users = $this->model->getAll(); // pastikan nama variabel sesuai view
-    $content = __DIR__ . '/../Views/index.php'; // **hanya path file**
+    $users = $this->model->getAll();
+    $content = __DIR__ . '/../Views/index.php';
     include __DIR__ . '/../Views/layout.php';
 }
 
@@ -45,7 +45,6 @@ class UserController {
         die("ID user tidak diberikan!");
     }
 
-    // Ambil data user
     $user = $this->model->getById($id);
     if (!$user) {
         die("User tidak ditemukan!");
@@ -84,7 +83,7 @@ class UserController {
 
 
    public function delete($id = null) {
-    // Pastikan id ada
+
     if (!$id) {
         die("ID user tidak diberikan!");
     }
@@ -123,3 +122,4 @@ public function detail($id = null) {
 
 
 }
+
