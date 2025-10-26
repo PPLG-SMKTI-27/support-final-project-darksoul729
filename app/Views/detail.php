@@ -5,7 +5,6 @@
     <style>
         img.profile {
             width: 120px;
-            border-radius: 50%;
         }
     </style>
 </head>
