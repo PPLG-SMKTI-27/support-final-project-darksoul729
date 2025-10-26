@@ -3,6 +3,16 @@
 <head>
     <title>Edit Pengguna</title>
 </head>
+<style>
+    #preview {
+        display: block;
+        margin-top: 10px;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+    }
+</style>
 <body>
     <h2>Edit Data Pengguna</h2>
     <form method="POST" enctype="multipart/form-data" action="">
