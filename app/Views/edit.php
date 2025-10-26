@@ -11,9 +11,29 @@
         Foto Saat Ini:<br>
         <img src="/public/uploads/<?= $user['photo'] ?>" width="60">
         Ganti Foto: <input type="file" name="photo"><br><br>
+        <img id="preview" src="#" alt="Preview Foto" style="display:none;"><br><br>
         <button type="submit">Simpan Perubahan</button>
     </form>
     <br>
     <a href="index.php">← Kembali</a>
 </body>
+<script>
+    const photoInput = document.querySelector('input[name="photo"]');
+    const preview = document.getElementById('preview');
+
+    photoInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        } else {
+            preview.style.display = 'none';
+        }
+    });
+</script>
 </html>
+
