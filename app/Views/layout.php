@@ -6,8 +6,7 @@
 <body>
 <h1>CRUD Game Puzzle</h1>
 <hr>
-<?php 
-// include view jika file ada
+<?php
 if (isset($content) && file_exists($content)) include $content; 
 ?>
 </body>
